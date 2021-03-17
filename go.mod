@@ -1,4 +1,3 @@
 module github.com/macnetic/underrum-dk
 
-go 1.15
-
+go 1.16
