@@ -1,4 +1,35 @@
-baseURL = "https://underrum.dk/"
+baseurl = "https://underrum.dk/"
+DefaultContentLanguage = "en"
+
+title = "Underrum"
+theme = "beautifulhugo"
+
 languageCode = "en-us"
 enableEmoji = true
-title = "Underrum"
+
+# Code formatting
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+[Params]
+    subtitle = "Hello, world!"
+    mainsections = ["blog"]
+    logo = "img/apple-touch-icon.png"
+    favicon = "img/favicon.ico"
+    dateFormat = "January 2, 2006"
+
+[Author]
+    name = "Magnus Oksbøl Therkelsen"
+    website = "underrum.dk"
+    github = "macnetic"
+    linkedin = "magnus-therkelsen"
+
+[[menu.main]]
+    name = "Blog"
+    url = ""
+    weight = 1
+
+[[menu.main]]
+    name = "About"
+    url = "about/"
+    weight = 2
