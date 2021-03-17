@@ -1,6 +1,0 @@
-[submodule "themes/contrast"]
-	path = themes/contrast
-	url = https://github.com/niklasbuschmann/contrast-hugo.git
-[submodule "themes/ananke"]
-	path = themes/ananke
-	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git

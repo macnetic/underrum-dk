@@ -1,0 +1,4 @@
+baseURL = "https://underrum.dk/"
+languageCode = "en-us"
+enableEmoji = true
+title = "Underrum"
