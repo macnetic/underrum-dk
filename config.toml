@@ -2,10 +2,12 @@ baseurl = "https://underrum.dk/"
 DefaultContentLanguage = "en"
 
 title = "Underrum"
-theme = "beautifulhugo"
+theme = "underrum-custom"
 
 languageCode = "en-us"
 enableEmoji = true
+
+enableRobotsTXT = true
 
 # Code formatting
 pygmentsCodeFences = true
@@ -33,3 +35,26 @@ pygmentsUseClasses = true
     name = "About"
     url = "about/"
     weight = 2
+
+[privacy]
+  [privacy.disqus]
+    disable = false
+  [privacy.googleAnalytics]
+    anonymizeIP = false
+    disable = false
+    respectDoNotTrack = false
+    useSessionStorage = false
+  [privacy.instagram]
+    disable = false
+    simple = false
+  [privacy.twitter]
+    disable = false
+    enableDNT = false
+    simple = false
+  [privacy.vimeo]
+    disable = false
+    enableDNT = false
+    simple = false
+  [privacy.youtube]
+    disable = false
+    privacyEnhanced = false
