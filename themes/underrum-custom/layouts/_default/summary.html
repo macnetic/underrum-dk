@@ -1,0 +1,13 @@
+<div class="card">
+	<div class="card-body">
+		<h2 class="card-title">{{ .Title }}</h2>
+		<p class="card-text">
+				{{ if isset .Params "summary" }}
+					{{ .Params.Summary | markdownify }}
+				{{ else }}
+					{{ .Summary }}
+				{{ end }}
+		</p>
+		<a class="stretched-link" href="{{ .Permalink }}"></a>
+	</div>
+</div>

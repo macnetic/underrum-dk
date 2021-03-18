@@ -1,0 +1,12 @@
+{{ define "main" }}
+
+<main class="container">
+	<div>
+		{{ range (.Paginate .Pages).Pages }}
+			{{ .Render "summary" }}
+		{{ end }}
+	</div>
+	
+	<div>
+	</div>
+</main>
