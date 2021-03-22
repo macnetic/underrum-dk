@@ -2,7 +2,7 @@ baseurl = "https://underrum.dk/"
 DefaultContentLanguage = "en"
 
 title = "Underrum"
-theme = "underrum-custom"
+theme = "eureka"
 
 languageCode = "en-us"
 enableEmoji = true
