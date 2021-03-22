@@ -1,9 +1,0 @@
-[submodule "themes/starter-academic"]
-	path = themes/starter-academic
-	url = https://github.com/wowchemy/starter-academic
-[submodule "themes/beautifulhugo"]
-	path = themes/beautifulhugo
-	url = https://github.com/halogenica/beautifulhugo.git
-[submodule "themes/eureka"]
-	path = themes/eureka
-	url = https://github.com/wangchucheng/hugo-eureka.git
