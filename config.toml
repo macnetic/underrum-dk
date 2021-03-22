@@ -1,3 +1,32 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseURL = "https://underrum.dk/"
+title = "Underrum"
+defaultContentLanguage = "en-us"
+
+theme = "underrum"
+
+enableRobotsTXT = true
+
+enableEmoji = true
+footnoteReturnLinkContents = "↩"
+
+[params]
+  AuthorName = "Magnus Oksbøl Therkelsen"
+
+[menu]
+    [[menu.main]]
+        name = "Blog"
+        pre = ""
+        post = ""
+        url = "/blog/"
+        weight = 1
+
+
+    [[menu.main]]
+        name = "About"
+        pre = ""
+        post = ""
+        url = "/about/"
+        weight = 2
+
+[permalinks]
+  blog = "/:year/:month/:title/"

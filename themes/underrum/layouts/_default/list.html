@@ -1,0 +1,38 @@
+{{ define "main" }}
+
+<main class="container">
+    <section class="section">
+        {{ range .Pages }}
+            <a href="{{ .Permalink }}">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-left">
+                                <figure class="image is-128by128">
+                                    <img src="https://bulma.io/images/placeholders/128x128.png">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <h3 class="title is-3">{{ .Title }}</h3>
+                                <h6 class="subtitle is-6">
+                                    <span class="icon-text">
+                                        <span class="icon">
+                                            <i class="far fa-clock"></i>
+                                        </span>
+                                        Published {{ .PublishDate.Format "January 2, 2006" }}
+                                    </span>
+                                </h6>
+                                <p>{{ .Summary }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+
+                    </div>
+                </div>
+            </a>
+        {{ end }}
+    </section>
+</main>
+
+{{ end }}
