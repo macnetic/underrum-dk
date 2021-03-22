@@ -1,20 +1,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <title>
-        {{ if isset .Params "title" }}
-            {{ .Title }} | {{ .Site.Title }}
-        {{ else }}
-            {{ .Site.Title }}
-        {{ end }}
-    </title>
 
-    {{ if isset .Params "description" }}
-        <meta description="{{ .Description }}">
-    {{ else if isset .Params "description" }}
-        <meta description="{{ .Site.Description }}">
-    {{ end }}
+    <title>
+        {{- if isset .Params "title" -}}
+            {{ .Title }} | {{ .Site.Title }}
+        {{- else -}}
+            {{ .Site.Title }}
+        {{- end -}}
+    </title>    
+    <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
