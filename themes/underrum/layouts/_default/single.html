@@ -1,20 +1,21 @@
 {{ define "main" }}
 
 <main class="container">
-
-    <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li>This</li>
-            <li>is</li>
-            <li>a</li>
-            <li>fake</li>
-            <li>breadcrumb</li>
-        </ul>
-    </nav>
+    <section class="section">
+        <nav class="breadcrumb is-medium" aria-label="breadcrumbs">
+            <ul>
+                <li>This</li>
+                <li>is</li>
+                <li>a</li>
+                <li>fake</li>
+                <li>breadcrumb</li>
+            </ul>
+        </nav>
+    </section>
     
     <section class="section">
         <h1 class="title">{{ .Title }}</h1>
-        <article>
+        <article class="content">
             {{ .Content }}
         </article>
     </section>
