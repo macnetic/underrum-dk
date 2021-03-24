@@ -1,27 +1,47 @@
-<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-            <img src="/favicon-32x32.png" alt="Home" width="28px" height="28px">
-        </a>
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
-    </div>
-    <div class="navbar-menu">
-        <div class="navbar-start">
-            {{ range .Site.Menus.main }}
-                <a class="navbar-item" href="{{ .URL }}">
-                    {{ .Pre }}
-                    <span>{{ .Name }}</span>
-                    {{ .Post }}
-                </a>
-            {{ end }}
+<header>
+    <nav class="navbar is-primary is-fixed-top" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <figure class="image is-32x32">
+                    <img src="/favicon-32x32.png" alt="Home" width="28px" height="28px">
+                </figure>
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
         </div>
-        
-        <div class="navbar-end">
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                {{ range .Site.Menus.main }}
+                    <a class="navbar-item" href="{{ .URL }}">
+                        {{ .Pre }}
+                        <span>{{ .Name }}</span>
+                        {{ .Post }}
+                    </a>
+                {{ end }}
+            </div>
+            
+            <div class="navbar-end">
+    
+            </div>
+        </div>
+    </nav>
+    
+    <div class="section py-3">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <ul>
+                    <li><a href="#">This</a></li>
+                    <li><a href="#">is</a></li>
+                    <li><a href="#">a</a></li>
+                    <li><a href="#">fake</a></li>
+                    <li class="is-active"><a href="#" aria-current="page">breadcrumb</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
 
-        </div>
-    </div>
-</nav>
+

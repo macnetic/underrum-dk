@@ -5,11 +5,9 @@ description: "Here's a list of semiconductor fabrication plants sourced directly
 draft: false
 ---
 
-## Introduction
-
 So I spent a lot of time compiling this list of semiconductor fabrication plants.
-I need it for a project that I'm hoping to post here as well, and I was not comfortable using the
-[list&nbsp;on&nbsp;Wikipedia](https://en.wikipedia.org/wiki/List_of_semiconductor_fabrication_plants)
+I need it for a project that I'm hoping to post here as well, and I was not comfortable using this list on  
+[Wikipedia](https://en.wikipedia.org/wiki/List_of_semiconductor_fabrication_plants)
 which, although more complete in some ways, is lacking sources, and didn't contain all the information I need.
 
 Maybe someone else will find this information useful, so I am publishing it here, with sources, for free.
