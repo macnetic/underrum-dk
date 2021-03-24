@@ -1,5 +1,46 @@
-<article class="block">
+<div class="box">
+    <div class="columns">
+        <div class="column is-2 is-full-mobile">
+            <a href="{{ .Permalink }}">
+                <figure class="image is-4by3">
+                    <img src="https://via.placeholder.com/200x160.webp" width="200px" height="160px">
+                </figure>
+            </a>
+        </div>
+        <div class="column">
+            <article>
+                <header>
+                    <a href="{{ .Permalink }}"><h2 class="title">{{ .Title }}</h2></a>
+                    <p class="subtitle">
+                        <span>
+                            {{ with .Site.Author }}by {{ .Site.Author }}{{ end }}
+                        </span>
+                        <span class="icon-text">
+                            <span class="icon"><i class="far fa-clock"></i></span>
+                            Published {{ .PublishDate.Format "January 2, 2006" }}
+                        </span>
+                    </p>
+                </header>
+                <div class="content">{{ .Summary }}</div>
+            </article>
+        </div>
+    </div>
+</div>
+
+{{/*  
+<article class="box">
     <a href="{{ .Permalink }}">
+        <header>
+            <h2 class="title is-2"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <h3 class="subtitle is-3">
+                <span class="icon-text">
+                    <span class="icon">
+                        <i class="far fa-clock"></i>
+                    </span>
+                    Published {{ .PublishDate.Format "January 2, 2006" }}
+                </span>
+            </h3>
+        </header>
         <div class="card">
             <div class="card-content">
                 <div class="columns">
@@ -27,4 +68,5 @@
             </div>
         </div>
     </a>
-</article>
+</article>  
+*/}}
