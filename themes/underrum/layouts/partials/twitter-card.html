@@ -1,0 +1,13 @@
+<!-- 
+    Meta tags that make links to this site look good on Twitter
+    https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards
+-->
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:creator" content="m_oksboel"/>
+<meta name="twitter:title" content="{{ .Title }}"/>
+<meta name="description" content="
+        {{- if .IsHome }}
+            {{- $.Site.Params.description -}}
+        {{ else }}
+            {{- .Description -}}
+        {{ end }}"/>
