@@ -12,6 +12,7 @@ footnoteReturnLinkContents = "↩"
 [params]
   AuthorName = "Magnus Oksbøl Therkelsen"
   description = "Welcome to my personal blog about space, science, technology, maps, and much more!"
+  mainSections = ["blog"]
 
 [menu]
     [[menu.main]]
