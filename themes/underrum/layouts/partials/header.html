@@ -1,5 +1,5 @@
 <header>
-    <nav class="navbar is-transparent is-fixed-top" aria-label="main navigation">
+    <nav class="navbar is-white is-fixed-top" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="/">
                 <div class="level">
@@ -17,11 +17,18 @@
         </div>
         <div class="navbar-menu">
             <div class="navbar-start">
-                {{ range .Site.Menus.main }}
-                    <a class="navbar-item" href="{{ .URL }}">
-                        {{ .Pre }}
+                {{ $currentPage := .}}
+                {{ range .Site.Menus.main }} 
+                    {{/*  My solution works more like I want it to than the Hugo builtin  */}}
+                    {{/*  {{ if $currentPage.IsMenuCurrent "main" . }}  */}}
+                    {{ if eq .Name $currentPage.Name}}
+                        <a class="navbar-item is-active" href="{{ .URL }}">
+                    {{ else }}
+                        <a class="navbar-item" href="{{ .URL }}">
+                    {{ end}}
+                    {{ .Pre }}
                         <span>{{ .Name }}</span>
-                        {{ .Post }}
+                    {{ .Post }}
                     </a>
                 {{ end }}
             </div>

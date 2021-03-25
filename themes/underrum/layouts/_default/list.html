@@ -3,11 +3,16 @@
 <main>
     <section class="section" aria-labelledby="list-title">
         <div class="container">
-            <h1 class="title is-1" id="list-title">{{ .Title }}</h1>
-            <p class="content is-large">{{ .Description }}</p>
-            {{ range .Pages }}
-                {{ partial "single-card.html" . }}
-            {{ end }}
+            <div class="block">
+                <h1 class="title is-1" id="list-title">{{ .Title }}</h1>
+                <p class="content is-large">{{ .Description }}</p>
+                <p class="content">{{ .Content }}</p>
+            </div>
+            <div class="block">
+                {{ range .Pages }}
+                    {{ partial "single-card.html" . }}
+                {{ end }}
+            </div>
         </div>
     </section>
 </main>
