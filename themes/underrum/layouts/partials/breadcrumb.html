@@ -1,0 +1,18 @@
+{{ if .nav.Parent }}
+    {{ partial "breadcrumb.html" (dict "nav" .nav.Parent "current" .current) }}
+{{ else if not .nav.IsHome }}
+    {{ partial "breadcrumb.html" (dict "nav" .nav.Site.Home "current" .current)}}
+{{ end }}
+
+
+<li {{ if eq .nav .current }}class="is-active"{{ end }}>
+    <a href="{{ .nav.Permalink }}" {{ if eq .nav .current }}aria-current="page"{{ end }}>
+        {{ if .nav.IsHome }}
+            <span class="icon-text">
+                <i class="fas fa-home"></i> Home
+            </span>
+        {{ else }}
+            {{ .nav.Title }}
+        {{ end }}
+    </a>
+</li>

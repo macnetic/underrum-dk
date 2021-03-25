@@ -1,6 +1,12 @@
 ---
 title: "About"
 date: 2021-03-22T16:08:40+01:00
+
+# Unsplash Source base url: https://source.unsplash.com/
+featuredImage: ""
+featuredImageAlt: ""
+featuredImageCaption: ""
+
 draft: false
 ---
 

@@ -6,7 +6,9 @@ tags: ["Semiconductor industry", "Semiconductor shortage", "Natural disasters", 
 
 featuredImage: "https://source.unsplash.com/nIEHqGSymRU"
 featuredImageAlt: "Macro image of a silicon wafer"
-featuredImageCaption: ""
+featuredImageCaption: >
+  Businesses all over the world is currently facing a supply shortage of semiconductor components, due to various reasons.
+  On this page I have compiled a (not quite yet) comprehensive list of semiconductor manufacturing plants with sources.
 
 draft: false
 ---

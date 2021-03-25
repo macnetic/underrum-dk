@@ -4,7 +4,15 @@
     <section class="section">
         <div class="container is-max-widescreen">
             <div class="box">
-                <article class="content">
+                <article class="content is-16by9">
+                    {{ with $.Params.featuredImage}}
+                        <figure class="image">
+                            <img src="{{ $.Params.featuredImage }}/640x360" width="640px" height="360px">
+                            {{ with $.Params.featuredImageCaption }}
+                                <figcaption>{{ $.Params.featuredImageCaption }}</figcaption>
+                            {{ end }}
+                        </figure>
+                    {{ end }}
                     <header class="block">
                         <h1 class="title">{{ .Title }}</h1>
                         <p class="subtitle"><span class="icon-text">
@@ -13,11 +21,6 @@
                         </span></p>
                     </header>
                     <div class="block">
-                        {{ if ne $.Params.featuredImage ""}}
-                            <img src="{{ $.Params.featuredImage }}" width="200px" height="160px">
-                        {{ else }}
-                            <img src="https://via.placeholder.com/200x160.webp" width="200px" height="160px">
-                        {{ end }}
                         {{ .Content }}
                     </div>
                     <footer class="block">

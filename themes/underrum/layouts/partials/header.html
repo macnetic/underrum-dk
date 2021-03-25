@@ -44,12 +44,15 @@
     <div class="container is-max-widescreen">
         <nav class="breadcrumb" aria-label="Breadcrumb">
             <ul>
+                {{ partial "breadcrumb.html" (dict "nav" . "current" .) }}
+            </ul>
+            <!-- <ul>
                 <li><a href="#">This</a></li>
                 <li><a href="#">is</a></li>
                 <li><a href="#">a</a></li>
                 <li><a href="#">fake</a></li>
                 <li class="is-active"><a href="#" aria-current="page">breadcrumb</a></li>
-            </ul>
+            </ul> -->
         </nav>
     </div>
 </div>
