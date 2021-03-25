@@ -6,13 +6,13 @@
             <div class="box">
                 <article class="content is-16by9">
                     {{ with $.Params.featuredImage}}
-                        <figure class="image">
+                        <figure class="image mt-0 mx-0 pt-0 px-0">
                             <img 
                             src="{{ $.Params.featuredImage }}/640x360"
                             alt="{{ with $.Params.featuredImageAlt }}{{ $.Params.featuredImageAlt }}{{ end }}"
                             width="640px" height="360px">
                             {{ with $.Params.featuredImageCaption }}
-                                <figcaption>{{ $.Params.featuredImageCaption }}</figcaption>
+                                <figcaption style="text-align: left;">{{ $.Params.featuredImageCaption }}</figcaption>
                             {{ end }}
                         </figure>
                     {{ end }}
