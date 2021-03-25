@@ -3,6 +3,11 @@ title: "Semiconductor Fabs"
 date: 2021-03-24T12:58:53+01:00
 description: "Here's a list of semiconductor fabrication plants sourced directly from the manufacturer websites."
 tags: ["Semiconductor industry", "Semiconductor shortage", "Natural disasters", "Earthquakes", "Data collection", "Project", "GIS"]
+
+featuredImage: "https://source.unsplash.com/nIEHqGSymRU"
+featuredImageAlt: "Macro image of a silicon wafer"
+featuredImageCaption: ""
+
 draft: false
 ---
 

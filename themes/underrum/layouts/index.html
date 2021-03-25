@@ -4,7 +4,7 @@
     <section class="section" aria-labelledby="list-title">
         <div class="container is-max-widescreen">
             <h1 class="title is-1" id="list-title">{{ .Site.Title }}</h1>
-            <p class="content is-large">Personal blog of Magnus Oksbøl Therkelsen</p>
+            <h2 class="content is-large">Personal blog of Magnus Oksbøl Therkelsen</h2>
             {{ range first 5 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
                 {{ partial "single-card.html" . }}
             {{ end }}

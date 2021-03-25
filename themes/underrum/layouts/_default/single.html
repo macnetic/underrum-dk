@@ -3,18 +3,31 @@
 <main>    
     <section class="section">
         <div class="container is-max-widescreen">
-            <article class="content">
-                <header>
-                    <h1 class="title">{{ .Title }}</h1>
-                </header>
-                {{ .Content }}
-                <footer class="block">
-                    <p class="has-text-weight-bold">Tags:</p>
-                        {{ range (.GetTerms "tags") }}
-                            <span class="tag">{{ .LinkTitle }}</span>
+            <div class="box">
+                <article class="content">
+                    <header class="block">
+                        <h1 class="title">{{ .Title }}</h1>
+                        <p class="subtitle"><span class="icon-text">
+                            <span class="icon"><i class="far fa-clock"></i></span>
+                            Published {{ .PublishDate.Format "January 2, 2006" }}
+                        </span></p>
+                    </header>
+                    <div class="block">
+                        {{ if ne $.Params.featuredImage ""}}
+                            <img src="{{ $.Params.featuredImage }}" width="200px" height="160px">
+                        {{ else }}
+                            <img src="https://via.placeholder.com/200x160.webp" width="200px" height="160px">
                         {{ end }}
-                </footer>
-            </article>
+                        {{ .Content }}
+                    </div>
+                    <footer class="block">
+                        <p class="has-text-weight-bold">Tags:</p>
+                            {{ range (.GetTerms "tags") }}
+                            <a href=""><span class="tag">{{ .LinkTitle }}</span></a>
+                            {{ end }}
+                    </footer>
+                </article>
+            </div>
         </div>
     </section>
 </main>

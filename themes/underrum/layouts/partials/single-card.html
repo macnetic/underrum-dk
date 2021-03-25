@@ -2,26 +2,32 @@
     <div class="columns">
         <div class="column is-2 is-full-mobile">
             <a href="{{ .Permalink }}">
-                <figure class="image is-4by3">
-                    <img src="https://via.placeholder.com/200x160.webp" width="200px" height="160px">
+                <figure class="image is-square">
+                    {{ if ne $.Params.featuredImage ""}}
+                        <img src="{{ $.Params.featuredImage }}/200x200" 
+                        alt="Image thumbnail{{with $.Params.featuredImageAlt}}. {{$.Params.featuredImageAlt}}{{end}}"
+                        width="200px" height="200px"/>
+                    {{ else }}
+                        <img src="https://via.placeholder.com/200x200.webp" width="200px" height="200px">
+                    {{ end }}
                 </figure>
             </a>
         </div>
         <div class="column">
             <article>
-                <header>
-                    <a href="{{ .Permalink }}"><h2 class="title">{{ .Title }}</h2></a>
-                    <p class="subtitle">
-                        <span>
-                            {{ with .Site.Author }}by {{ .Site.Author }}{{ end }}
-                        </span>
+                <header class="block mb-3">
+                    <a href="{{ .Permalink }}"><h3 class="title is-3">{{ .Title }}</h3></a>
+                    <p>
+                        <span>{{ with .Site.Author }}by {{ .Site.Author }}{{ end }}</span>
                         <span class="icon-text">
                             <span class="icon"><i class="far fa-clock"></i></span>
                             Published {{ .PublishDate.Format "January 2, 2006" }}
                         </span>
                     </p>
                 </header>
-                <div class="content">{{ .Summary }}</div>
+                <div class="content">
+                    {{ .Summary }}
+                </div>
             </article>
         </div>
     </div>
