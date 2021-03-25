@@ -7,7 +7,10 @@
                 <article class="content is-16by9">
                     {{ with $.Params.featuredImage}}
                         <figure class="image">
-                            <img src="{{ $.Params.featuredImage }}/640x360" width="640px" height="360px">
+                            <img 
+                            src="{{ $.Params.featuredImage }}/640x360"
+                            alt="{{ with $.Params.featuredImageAlt }}{{ $.Params.featuredImageAlt }}{{ end }}"
+                            width="640px" height="360px">
                             {{ with $.Params.featuredImageCaption }}
                                 <figcaption>{{ $.Params.featuredImageCaption }}</figcaption>
                             {{ end }}
@@ -26,7 +29,7 @@
                     <footer class="block">
                         <p class="has-text-weight-bold">Tags:</p>
                             {{ range (.GetTerms "tags") }}
-                            <a href=""><span class="tag">{{ .LinkTitle }}</span></a>
+                            <a href="{{ .Permalink }}"><span class="tag">{{ .LinkTitle }}</span></a>
                             {{ end }}
                     </footer>
                 </article>
