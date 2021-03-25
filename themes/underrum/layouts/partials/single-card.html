@@ -1,7 +1,7 @@
 <div class="box">
     <div class="columns">
         <div class="column is-2 is-full-mobile">
-            <a href="{{ .Permalink }}">
+            <a title="{{ .Title }}" href="{{ .Permalink }}">
                 <figure class="image is-square">
                     {{ if ne $.Params.featuredImage ""}}
                         <img src="{{ $.Params.featuredImage }}/200x200" 
