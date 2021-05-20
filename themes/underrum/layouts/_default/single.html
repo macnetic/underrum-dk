@@ -1,9 +1,9 @@
 {{ define "main" }}
 
-<main>    
-    <section class="section">
+<main>
+    <section class="section pt-3 px-0">
         <div class="container is-max-widescreen">
-            <div class="box">
+            <div class="box is-radiusless">
                 <article class="content is-16by9">
                     {{ with $.Params.featuredImage}}
                         <figure class="image mt-0 mx-0 pt-0 px-0">
@@ -23,7 +23,7 @@
                             Published {{ .PublishDate.Format "January 2, 2006" }}
                         </span></p>
                     </header>
-                    <div class="block">
+                    <div class="block has-text-justified">
                         {{ .Content }}
                     </div>
                     <footer class="block">
