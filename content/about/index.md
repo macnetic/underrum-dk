@@ -1,6 +1,6 @@
 ---
 title: "About"
-date: 2021-05-20T16:00:00+01:00
+date: 2021-05-20T00:00:00+01:00
 
 # Unsplash Source base url: https://source.unsplash.com/
 featuredImage: ""
